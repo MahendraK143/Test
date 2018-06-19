@@ -1,0 +1,146 @@
+binnu@DESKTOP-1SLP6T0 MINGW64 ~
+$ cd /c
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c
+$ cd GIT/
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git remote add origin "https://github.com/MahendraK143/Test.git"
+fatal: remote origin already exists.
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git clone https://github.com/MahendraK143/Test.git
+Cloning into 'Test'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git add "file1.txt"
+fatal: pathspec 'file1.txt' did not match any files
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ cd Test/
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git add "file1.txt"
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git commit -m "adding file1"
+[master ef3922b] adding file1
+ 1 file changed, 4 insertions(+)
+ create mode 100644 file1.txt
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ ls
+file1.txt  README.md
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git log
+commit ef3922b3c03b42780ea655f080e5d839ee725e48 (HEAD -> master)
+Author: MahendraK143 <kolamahendra9@gmail.com>
+Date:   Tue Jun 19 22:02:12 2018 +0530
+
+    adding file1
+
+commit 8339c3e9d8cf77f3a108733df78ff7da8d2189ce (origin/master, origin/HEAD)
+Author: MahendraK143 <kolamahendra9@gmail.com>
+Date:   Tue Jun 19 10:43:17 2018 +0530
+
+    Initial commit
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git commit -m "adding file1" file1.txt
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ ls
+AbstractFactoryPatternExample.java  ComputerFactoryPattern.java  README.md
+AdapterPatternTest.java             file1.txt
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git add -A
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   AbstractFactoryPatternExample.java
+        new file:   AdapterPatternTest.java
+        new file:   ComputerFactoryPattern.java
+
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT/Test (master)
+$ git commit -a -m "adding abstract Factory Patter Example, AdapterPatternTest,Computer Factory Patterns example"
+[master 432e1c1] adding abstract Factory Patter Example, AdapterPatternTest,Computer Factory Patterns example
+ 3 files changed, 338 insertions(+)
+ create mode 100644 AbstractFactoryPatternExample.java
+ create mode 100644 AdapterPatternTest.java
+ create mode 100644 ComputerFactoryPattern.java
+
+ 
+ binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git branch firstbranch
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+D       AbstractFactoryPatternExample.java
+D       AdapterPatternTest.java
+D       ComputerFactoryPattern.java
+D       EagerInitializedSingleton.java
+D       LazyInitializedSingletonTest.java
+D       PrototypePatternTest.java
+D       README.md
+D       ReflectionSingletonTest.java
+D       SerializedSingleton.java
+D       SingletonSerializedTest.java
+D       StaticBlockSingletonTest.java
+D       TestCompositePattern.java
+D       ThreadSafeSingletonTest.java
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (firstbranch)
+$ ls
+Mahendra/  Test/
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (firstbranch)
+$ git add branch.txt
+
+binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (firstbranch)
+$ git commit -m "adding branch.txt to firstbranch"
+[firstbranch f549c8f] adding branch.txt to firstbranch
+ 1 file changed, 3 insertions(+)
+ create mode 100644 branch.txt
+
+ binnu@DESKTOP-1SLP6T0 MINGW64 /c/GIT (master)
+$ git merge firstbranch
+Updating e12a126..f549c8f
+Fast-forward
+ branch.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 branch.txt
